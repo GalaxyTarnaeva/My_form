@@ -2,15 +2,22 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Регистрация студента</title>
+    <title>Форма обратной связи</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
 <div class="page">
     <main class="card">
-        <h1 class="title">Форма регистрации студента</h1>
-        <form id="studentForm" class="form">
+        <h1 class="title">Форма обратной связи</h1>
+
+        <!-- ВАЖНО: здесь method="post" -->
+        <!-- action укажем на простой echo-сервис, чтобы было видно отправленные данные -->
+        <form
+            class="form"
+            method="post"
+            action="https://httpbin.org/post"
+            target="_blank"
+        >
             <div class="form-row">
                 <label for="lastName" class="form-label">Фамилия</label>
                 <input
@@ -67,7 +74,6 @@
             </div>
 
             <button type="submit" class="btn">Отправить</button>
-            <p id="result" class="result" aria-live="polite"></p>
         </form>
     </main>
 </div>
