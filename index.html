@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация студента</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<div class="page">
+    <main class="card">
+        <h1 class="title">Форма регистрации студента</h1>
+        <form id="studentForm" class="form">
+            <div class="form-row">
+                <label for="lastName" class="form-label">Фамилия</label>
+                <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    class="form-input"
+                    placeholder="Введите фамилию"
+                    required
+                >
+            </div>
+
+            <div class="form-row">
+                <label for="firstName" class="form-label">Имя</label>
+                <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    class="form-input"
+                    placeholder="Введите имя"
+                    required
+                >
+            </div>
+
+            <div class="form-row">
+                <label for="middleName" class="form-label">Отчество</label>
+                <input
+                    type="text"
+                    id="middleName"
+                    name="middleName"
+                    class="form-input"
+                    placeholder="Введите отчество"
+                    required
+                >
+            </div>
+
+            <div class="form-row">
+                <label for="group" class="form-label">Группа</label>
+                <select
+                    id="group"
+                    name="group"
+                    class="form-input"
+                    required
+                >
+                    <option value="" disabled selected>Выберите номер группы</option>
+                    <option value="4-МД-4">4-МД-4</option>
+                    <option value="4-МД-5">4-МД-5</option>
+                    <option value="4-МД-8">4-МД-8</option>
+                    <option value="4-МД-15">4-МД-15</option>
+                    <option value="4-МД-17">4-МД-17</option>
+                    <option value="4-МД-20">4-МД-20</option>
+                    <option value="4-МД-21">4-МД-21</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Отправить</button>
+            <p id="result" class="result" aria-live="polite"></p>
+        </form>
+    </main>
+</div>
+</body>
+</html>
